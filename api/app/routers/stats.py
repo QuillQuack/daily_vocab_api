@@ -10,7 +10,7 @@ from app.schemas import SummaryResponse, HistoryItem
 router = APIRouter()
 
 
-@router.get("/summary", response_model=SummaryResponse)
+@router.post("/summary", response_model=SummaryResponse)
 def get_summary(db: Session = Depends(get_db)):
     """Get overall practice statistics"""
     
